@@ -34,7 +34,9 @@ workflows:
                     keyPassword=$CM_KEY_ALIAS_PASSWORD
                     keyAlias=$CM_KEY_ALIAS_USERNAME
                     storeFile=/tmp/keystore.keystore
-                    EOF               
+                    EOF  
+            - name: Make gradlew executable
+              run: chmod +ux ./gradlew
             - name: Build Android release
               script: |
                 # Set environment variable so it can be used to increment build number in android/app/build.gradle
