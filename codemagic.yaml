@@ -37,7 +37,7 @@ workflows:
                     EOF  
             - name: Make gradlew executable
               script: |
-                chmod +ux ./gradlew
+                chmod +ux gradlew
               
             - name: Build Android release
               script: |
