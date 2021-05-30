@@ -35,9 +35,7 @@ workflows:
                     keyAlias=$CM_KEY_ALIAS_USERNAME
                     storeFile=/tmp/keystore.keystore
                     EOF  
-            - name: Make gradlew executable
-              script: |
-                chmod +ux gradlew
+
               
             - name: Build Android release
               script: |
