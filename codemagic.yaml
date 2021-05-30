@@ -36,7 +36,9 @@ workflows:
                     storeFile=/tmp/keystore.keystore
                     EOF  
             - name: Make gradlew executable
-              run: chmod +ux ./gradlew
+              script: |
+                chmod +ux ./gradlew
+              
             - name: Build Android release
               script: |
                 # Set environment variable so it can be used to increment build number in android/app/build.gradle
